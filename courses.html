@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>School Of Education Website</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="data:image/jpeg;base64,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" height="80" width="80" alt="">
+            <h2 class="m-0 text-primary"></i>School Of Education, Humanities And Social Sciences  </h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="courses.html" class="nav-item nav-link active">Courses</a>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">Courses</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="contact.html">contact</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Courses</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Categories Start -->
+    <div class="container-xxl py-5 category">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Categories</h6>
+                <h1 class="mb-5">Courses Categories</h1>
+            </div>
+            <div class="row g-3">
+                <div class="col-lg-7 col-md-6">
+                    <div class="row g-3">
+                        <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="img/cat-1.jpg" alt="">
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                    <h5 class="m-0">Journalism and Mass Com</h5>
+                                    
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq-l7OUfSE8O-jy9egHDFOa0q3Rwv0xMiBng&s" alt="">
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                    <h5 class="m-0">social Work</h5>
+                                     
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+                            <a class="position-relative d-block overflow-hidden" href="">
+                                <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCLpQqPzjNQXp9GgM-dY0lk8AY2S3dTjVcTA&s"" alt="">
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                    <h5 class="m-0"> Education</h5>
+                                     
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
+                    <a class="position-relative d-block h-100 overflow-hidden" href="">
+                        <img class="img-fluid position-absolute w-100 h-100" src="img/about-2.jpg" alt="" style="object-fit: cover;">
+                        <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
+                            <h5 class="m-0">Developmental Studies</h5>
+                             
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Categories Start -->
+
+
+    <!-- Courses Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
+                <h1 class="mb-5">Get Familiar</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="img/course-1.jpg" alt="">
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                 
+                            </div>
+                            <h5 class="mb-4">Journalism and Mass Communication</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="img/course-2.jpg" alt="">
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                            </div>
+                            <h5 class="mb-4"> Arts or Science with <br>
+                            Education </h5>
+                        </div>
+ 
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTExk_c9nVc3BSYFJez6Za3smRALPlAVhqW0w&s " alt="">
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                            </div>
+                            <h5 class="mb-4"> Public Administration and Management</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Courses End -->
+
+
+     
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Privacy Policy</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">FAQs & Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2">P.O. Box 6529 Kampala, Uganda</p>
+                    <p class="mb-2"> Website: www.bugemauniv.ac.ug</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>031 2351400</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@bugemauniv.ac.ug</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://twitter.com/UnivBugema?"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/bugemauniv.ac.ug/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/channel/UCS_rf3JZ95_0sTI42N2xP9Q"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://ug.linkedin.com/school/bugema-university/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Join Us</h4> 
+                    <p>For More Details</p>
+                   
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; 2024 <a class="border-bottom" href="#">School of Education</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
